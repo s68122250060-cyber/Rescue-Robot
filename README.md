@@ -1,18 +1,22 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+1. Java สืบทอดหลําย class ไม่ได้เพรําะอะไร
+ตอบ Java ไม่รองรับ multiple inheritance ของ class เพราะอาจเกิดปัญหา Diamond Problem
+เมื่อ class ลูกได้รับ method ที่เหมือนกันจากหลาย class ทำให้เกิดความสับสนว่า
+ควรใช้ method จาก class ใด
 
-## Folder Structure
+2. เราใช้ interface + composition แทนอย่ํางไร
+ตอบ เมื่่อclass ลูกได้รับ method ที่เหมือนกันจากหลาย class ทำให้เกิดความสับสนว่า
 
-The workspace contains two folders by default, where:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+3. อธิบํายกํารแก้ปัญหํา default method ชื่อชนกัน 
+ตอบ ในโปรเจกต์นี้ RescueRobot ใช้ implements หลาย interface ได้แก่
+Flyable, Drivable, ThermalSensor และ Communicable
+เพื่อให้สามารถมีหลายความสามารถได้
+และใช้ Composition โดยให้ RescueRobot มี object ภายใน ได้แก่
+Battery, GPSTracker และ ThermalCamera
+ซึ่งเป็นความสัมพันธ์แบบ has-a
+Flyable.super.status()
+Drivable.super.status()
+เพื่อรวมผลลัพธ์เข้าด้วยกัน
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
