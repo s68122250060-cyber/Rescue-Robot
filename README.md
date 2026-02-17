@@ -1,7 +1,7 @@
 # Rescue Robot Project
 
 ## Description
-This project demonstrates multiple inheritance in Java using interfaces and composition.
+โปรเจกต์นี้สาธิตการสืบทอดแบบหลายทางในภาษา Java โดยใช้อินเทอร์เฟซและการประกอบ (composition)
 
 ## How to Run
 1. Java สืบทอดหลาย class ไม่ได้เพราะอะไร
@@ -25,3 +25,4 @@ Drivable.super.status()
 
 ## Author
 ภิมวิธ ศรีถาวร
+
